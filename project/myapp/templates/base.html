@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+       <div class = "navbar">
+            <div class = "navcontainer">
+                <h1> MnemonicAI </h1>
+                <nav>
+                    <ul>
+                        <li> <a href = "{% url 'Home' %}"> Try it</a> </li>
+                        <li> About </li>
+                        <li> Contact </li>
+                    </ul>
+                </nav>
+            </div>
+       </div>
+        {% block content %}
+        {% endblock %}
+    
+</body>
+
+</html>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+    }
+    .container{
+        border:5px solid black;
+        height:100vh;
+    }
+
+    .navbar{
+      height:70px;
+      background-color:steelblue;
+      color:white;
+    }
+
+    .navcontainer{
+        max-width:1100px;
+        margin: 0 auto;
+        border:5px solid black;
+        height:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+    }
+    
+    li{
+        list-style: none;
+    }
+    ul{
+        border:5px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:1em;
+    }
+    a{
+        text-decoration: none;
+        color:white;
+    }
+ 
+</style>
+  
