@@ -6,47 +6,54 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-
-       <div class = "navbar">
-            <div class = "navcontainer">
-                <h1> MnemonicAI </h1>
-                <nav>
-                    <ul>
-                        <li> <a href = "{% url 'Home' %}"> Try it</a> </li>
-                        <li> About </li>
-                        <li> Contact </li>
-                    </ul>
-                </nav>
-            </div>
-       </div>
+    <div class = "navbar">
+        <div class = "navcontainer">
+            <h1> MnemonicAI </h1>
+            <nav>
+                <ul>
+                    <li> <a href = "{% url 'Home' %}"> Try it</a> </li>
+                    <li> About </li>
+                    <li> Contact </li>
+                </ul>
+            </nav>
+        </div>
+    <div class = "container">
+    
         {% block content %}
         {% endblock %}
+    </div>
+</div>
+     
     
 </body>
 
 </html>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
     *{
+        font-family: 'Comfortaa', cursive;
         box-sizing: border-box;
         margin:0;
         padding:0;
     }
     .container{
-        border:5px solid black;
         height:100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .navbar{
       height:70px;
-      background-color:steelblue;
+      background-color:#7353BA;
       color:white;
+      
     }
 
     .navcontainer{
         max-width:1100px;
         margin: 0 auto;
-        border:5px solid black;
         height:100%;
         display: flex;
         justify-content: space-between;
@@ -58,7 +65,6 @@
         list-style: none;
     }
     ul{
-        border:5px solid black;
         display: flex;
         justify-content: center;
         align-items: center;

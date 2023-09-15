@@ -1,4 +1,55 @@
 {% extends "base.html" %}
 {% block title %} MnemonicAI {% endblock %}
 {% block content %}
+
+
+<form>
+    <h3> Enter the list of words you want to make a mnemonic for. Seperate words by comma.</h1>
+   
+   <div class = inputContainer>
+    <input type = "text" >
+    <button type = "submit"> Submit </button>
+   </div> 
+</form>
+
+<style>
+    .inputContainer{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:1em;
+    }
+    h3{
+        color:black
+    }
+    input{
+        width:100%;
+        height:40px;
+    }
+    button{
+        padding:1em 2em;
+        border-radius:40px;
+        width:100%;
+        background-color:#7353BA;
+        color:white;
+    }
+    form{
+        max-width: 1100px;
+        margin:0 auto;
+        width:600px;
+        height:600px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        border-radius: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:1em;
+        padding:50px;
+    }
+</style>
+
+
 {% endblock %}
